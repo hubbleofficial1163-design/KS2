@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 5-летием, любимая! ❤️</title>
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Главный экран с таймером -->
+        <section class="hero-section">
+            <h1 class="hero-title">5 лет с того самого дня...</h1>
+            <div class="timer" id="timer">
+                <span>Мы вместе уже:</span>
+                <div class="timer-display" id="timerDisplay">0 д. 0 ч. 0 мин. 0 сек.</div>
+            </div>
+            <div class="scroll-hint">↓ Листай ниже, чтобы узнать, помнишь ли ты нашу историю ↓</div>
+        </section>
+
+        <!-- Тестовая зона -->
+        <section class="quiz-section">
+            <h2 class="quiz-title">Как хорошо ты помнишь нашу историю?</h2>
+            <p class="quiz-subtitle">(Выбирай правильный вариант ответа)</p>
+
+            <!-- Контейнер для активного вопроса -->
+            <div id="quizContainer" class="quiz-container">
+                <!-- Сюда JavaScript будет подгружать вопросы -->
+            </div>
+
+            <!-- Индикатор прогресса и счет -->
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBar" style="width: 0%;"></div>
+            </div>
+            <div class="question-counter" id="questionCounter">Вопрос 1 из 5</div>
+        </section>
+
+        <!-- ПАЗЛ - теперь отдельная секция после тестов -->
+        <section class="quiz-section" id="puzzleSection">
+            <h2 class="quiz-title">Собери нашу фотографию</h2>
+            <p class="quiz-subtitle">(перемещай кусочки, чтобы восстановить фото)</p>
+            
+            <div class="puzzle-container" id="puzzleContainer">
+                <div class="puzzle-grid" id="puzzleGrid"></div>
+                <div class="puzzle-controls">
+                    <button class="option-btn" id="shufflePuzzle">Перемешать</button>
+                    <button class="option-btn" id="solvePuzzle">Показать оригинал</button>
+                </div>
+                <div class="result-message" id="puzzleResult"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
